@@ -1,5 +1,5 @@
 function play() {
-  let responseText = document.querySelector("#ball-text");
+  const responseText = document.querySelector("#ball-text");
 
   let randomNumber = Math.floor(Math.random() * 8);
 
@@ -23,9 +23,9 @@ function play() {
 function question(event) {
   event.preventDefault();
 
-  let questionInput = document.querySelector("#input-bar");
+  const questionInput = document.querySelector("#input-bar");
 
-  let questionText = document.querySelector("#question-text");
+  const questionText = document.querySelector("#question-text");
   if (questionInput.value) {
     questionText.innerHTML = `${questionInput.value}`;
   }
@@ -34,5 +34,5 @@ function question(event) {
   play();
 }
 
-let form = document.querySelector("#search-bar");
+const form = document.querySelector("#search-bar");
 form.addEventListener("submit", question);
